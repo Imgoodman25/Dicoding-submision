@@ -1,0 +1,298 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  position: relative;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.besar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: turquoise;
+  opacity: 70%;
+}
+.besar {
+  width: 100%;
+  height: 100vh;
+  /* background-color: turquoise; */
+  background: url("https://cdn.pixabay.com/photo/2018/11/22/11/30/bromo-3831721__340.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.besar p {
+  /* text-align: center;   */
+  font-size: 55px;
+  color: white;
+  position: absolute;
+  top: 40%;
+  right: 30%;
+}
+.besar .gambar {
+  display: flex;
+  justify-content: space-around;
+  width: 70%;
+  margin: auto;
+}
+.besar .gambar img {
+  border-top: 10px solid white;
+  border-left: 5px solid white;
+  border-right: 5px solid white;
+  border-bottom: 5px solid white;
+  width: 250px;
+  margin: 400px 0;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+nav .logo {
+  font-size: 30px;
+}
+nav {
+  width: 100%;
+  z-index: 1;
+  position: fixed;
+  padding: 30px 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: transparent;
+  transition: 0.5s;
+  color: white;
+}
+.sticky {
+  width: 100%;
+  z-index: 1;
+  position: fixed;
+  padding: 8px 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  transition: 0.5s;
+  color: black;
+}
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+}
+nav ul li {
+  list-style: none;
+  position: relative;
+}
+nav ul li::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  border-bottom: 2px solid transparent;
+  transition: width 1s;
+  /* top: 0;
+    left: 0;
+    right: 0; */
+  bottom: -5;
+}
+nav ul li:hover::before {
+  border: 2px solid white;
+  border-right: none;
+  border-top: none;
+  border-left: none;
+  width: 100%;
+}
+.sticky ul li::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  border-bottom: 2px solid transparent;
+  transition: width 1s;
+  /* top: 0;
+    left: 0;
+    right: 0; */
+  bottom: -5;
+}
+.sticky ul li:hover::before {
+  border: 2px solid black;
+  border-right: none;
+  border-top: none;
+  border-left: none;
+  width: 100%;
+}
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 400;
+}
+.sticky ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 400;
+}
+main {
+  position: relative;
+}
+.content {
+  width: 75%;
+}
+#content article {
+  /* background-color: brown; */
+  padding: 10px;
+  margin: 10px 10px;
+  width: 75%;
+  box-shadow: 0px 0px 1px 0.3px grey;
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: space-between; */
+  cursor: pointer;
+  /* border-radius: 20px; */
+}
+.cover {
+  display: flex;
+  justify-content: space-between;
+}
+.main-content-deskripsi {
+  display: none;
+  /* height: 100%; */
+}
+.main-content-sejarah {
+  display: none;
+  /* height: 300px; */
+}
+.main-content-geografi {
+  display: none;
+  /* height: 300px; */
+}
+.main-content-wisata {
+  display: none;
+  /* height: 300px; */
+}
+aside {
+  width: 20%;
+  position: absolute;
+  top: 0;
+  right: 12;
+  text-align: center;
+}
+header {
+  box-shadow: 0 0 2px 0.4px grey;
+  width: 90%;
+  padding: 10px;
+}
+aside header h3 {
+  text-align: center;
+  /* margin: 5px 0; */
+}
+aside header img {
+  width: 100%;
+}
+/* aside header p{
+    margin: auto;
+    text-align: justify;
+    width: 40%;
+    padding: 5px;
+} */
+.kotak {
+  display: none;
+}
+footer {
+  font-size: 17px;
+  padding: 30px;
+  text-align: center;
+  background-color: #5fd5cf;
+}
+@media screen and (max-width: 1000px) {
+  aside {
+    width: 275px;
+    position: static;
+    margin: auto;
+  }
+  header {
+    box-shadow: 0 0 2px 0.4px grey;
+    width: 100%;
+    padding: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+  }
+  aside header h3 {
+    /* text-align: center; */
+    /* margin: 5px 0; */
+  }
+  aside header img {
+    width: 100%;
+  }
+  #content article {
+    width: 95%;
+  }
+  .besar p {
+    top: 40%;
+    right: 18%;
+    /* font-size: 40px; */
+  }
+  nav ul {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+  }
+}
+@media screen and (max-width: 650px) {
+  nav ul {
+    display: none;
+  }
+  body{
+      position: relative;
+  }
+  nav {
+    justify-content: space-between;
+    /* position: static; */
+  }
+  .sticky {
+    justify-content: space-between;
+  }
+  .kotak span {
+    margin-right: 70px;
+  }
+  .kotak {
+    display: block;
+    cursor: pointer;
+    z-index: 10;
+  }
+  .besar p {
+    top: 40%;
+    left: 18%;
+    font-size: 34px;
+    /* right: 1%; */
+  }
+  #content article {
+    width: 92%;
+  }
+  .hamburger{
+      display: flex;
+      position: absolute;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      background-color: #31A196;
+      width: 50%;
+      height: 100vh;
+      top: 0;
+      right: 0;
+      left: 43%;
+      bottom: 0;
+  }
+}
+@media screen and (max-width: 420px) {
+  #content article {
+    width: 88%;
+  }
+  .besar p {
+    top: 40%;
+    left: 18%;
+    font-size: 26px;
+    /* right: 1%; */
+  }
+}
